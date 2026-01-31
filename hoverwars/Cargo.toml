@@ -1,0 +1,24 @@
+[package]
+name = "hoverwars"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+async-graphql = { version = "=7.0.17", default-features = false }
+async-graphql-value = "=7.0.17"
+futures = "0.3.24"
+linera-sdk = "0.15.7"
+serde = { version = "1.0.130", features = ["derive"] }
+thiserror = "1.0.38"
+
+[dev-dependencies]
+linera-sdk = { version = "0.15.7", features = ["test"] }
+webassembly-test = "0.1.0"
+
+[[bin]]
+name = "hoverwars_contract"
+path = "src/contract.rs"
+
+[[bin]]
+name = "hoverwars_service"
+path = "src/service.rs"
